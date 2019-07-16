@@ -1,0 +1,73 @@
+
+
+DROP schema public cascade;
+create schema public;
+
+CREATE TABLE users(
+   	id serial PRIMARY KEY not null,
+	user_name VARCHAR (50) UNIQUE NOT NULL,
+  	created_on date not null default CURRENT_DATE
+);
+
+CREATE TABLE tags(
+	id serial PRIMARY KEY not null,
+	tag_name VARCHAR (50) UNIQUE NOT NULL
+);
+
+CREATE TABLE todos(
+	id serial PRIMARY KEY not null,
+	user_id INTEGER REFERENCES users (id),
+	text VARCHAR (50) UNIQUE NOT NULL,
+	created_on date not null default CURRENT_DATE,
+	updated_on date
+);
+
+CREATE TABLE todos_to_tags(
+	id serial PRIMARY KEY not null,
+	todo_id INTEGER REFERENCES todos (id),
+	tag_id INTEGER REFERENCES tags (id)
+);
+
+insert into tags (tag_name)
+values
+	('not important'),
+	('medium'),
+	('high importance'); 
+
+insert into users (user_name)
+values
+	('victor'),
+	('vanea'),
+	('igor');
+
+insert into todos (user_id,text)
+values
+	(1,'de maturat'),
+	(1,'de jucat la calculator'),
+	(1,'de facut temele'),
+	(2,'de reparat tractorul'),
+	(2,'de cumparat produse'),
+	(2,'de prasit'),
+	(3,'de curatit cartofi'),
+	(3,'de facut o fapta buna'),
+	(3,'de gasit un lucru');
+
+insert into todos_to_tags(todo_id,tag_id)
+values
+	(1,1),
+	(2,3),
+	(3,1),
+	(4,1),
+	(5,2), 
+	(6,1),
+	(7,3),
+	(8,1),
+	(9,1);
+
+insert into todos_to_tags(todo_id,tag_id)
+values
+	(9,2),
+	(9,3);
+
+
+
