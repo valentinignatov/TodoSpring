@@ -1,23 +1,54 @@
 package com.example.sweater.service.impl;
 
-import com.example.sweater.repository.TodoRepository;
-import com.example.sweater.service.TodoService;
+import com.example.sweater.bean.CreateTodoBean;
 import com.example.sweater.model.Todo;
+import com.example.sweater.repository.TodoRepository;
+import com.example.sweater.service.TagService;
+import com.example.sweater.service.TodoService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TodoServiceImpl implements TodoService {
 
     private TodoRepository todoRepository;
 
-    public TodoServiceImpl(TodoRepository todoRepository) {
+    private TagService tagService;
+
+    public TodoServiceImpl(TodoRepository todoRepository,
+                           TagService tagService) {
         this.todoRepository = todoRepository;
+        this.tagService = tagService;
     }
 
     @Override
     public List<Todo> findAll() {
         return todoRepository.findAll();
     }
+
+    @Override
+    public Optional<Todo> findById(Long id) {
+        return todoRepository.findById(id);
+    }
+
+    @Override
+    public Todo save(Todo todo) { return todoRepository.save(todo);}
+
+    @Override
+    public Todo createTodo(CreateTodoBean createTodoBean) {
+
+        // check if toto exist by text
+
+        // check if exists by id
+
+
+        Todo savedTodo = todoRepository.save(new Todo());
+
+        // save todo tag data
+
+        return savedTodo;
+    }
+
 }
