@@ -1,6 +1,7 @@
 package com.example.sweater.service.impl;
 
 import com.example.sweater.bean.CreateTodoBean;
+import com.example.sweater.model.Tag;
 import com.example.sweater.model.Todo;
 import com.example.sweater.repository.TodoRepository;
 import com.example.sweater.service.TagService;
@@ -38,17 +39,58 @@ public class TodoServiceImpl implements TodoService {
 
     @Override
     public Todo createTodo(CreateTodoBean createTodoBean) {
+        Optional<String> foundTodo = todoRepository.findByText(createTodoBean.getText());
+        Optional<Tag> foundTag = tagService.findById(createTodoBean.getTagId());
 
-        // check if toto exist by text
+        Todo savedTodo = new Todo();
+        savedTodo.setUserId(createTodoBean.getUserId());
+        savedTodo.setText(createTodoBean.getText());
+
+        if (foundTodo.isPresent()) {
+            //Throw  exept
+
+        } else if (foundTag.isPresent()) {
+            todoRepository.save(savedTodo);
+
+            tagService.addTagForTodo(createTodoBean.getTagId(),todoRepository.getIdByText(savedTodo.getText()));
+
+            savedTodo.setText(savedTodo.getText()+" SUCCESFULY ADDED");
+        }
 
         // check if exists by id
 
-
-        Todo savedTodo = todoRepository.save(new Todo());
-
-        // save todo tag data
+        savedTodo.toString();
 
         return savedTodo;
     }
 
+    @Override
+    public Todo updateTodo(CreateTodoBean createTodoBean) {
+        Optional<Tag> foundTag = tagService.findById(createTodoBean.getTagId());
+
+        Todo updateTodo = new Todo();
+        updateTodo.setUserId(createTodoBean.getUserId());
+        updateTodo.setText(createTodoBean.getText());
+
+
+        if (todoRepository.existsById(createTodoBean.getUserId()) && foundTag.isPresent()) {
+            tagService.updateTagforTodo(createTodoBean.getTagId(), createTodoBean.getUserId());
+        }
+
+        if (todoRepository.existsById(createTodoBean.getUserId()) && foundTag.isPresent()) {
+            //createTodoBean.getUserId() contains todoId
+
+            todoRepository.updateById(createTodoBean.getText(), createTodoBean.getUserId());
+        }
+        return updateTodo;
+    }
+
+    @Override
+    public Todo deleteById(Long id) {
+        tagService.deleteByTodoId(id);
+
+        todoRepository.deleteById(id);
+
+        return null;
+    }
 }

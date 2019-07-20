@@ -20,4 +20,8 @@ public interface TodoService {
     Optional<Todo> findById(Long id);
 
     Todo createTodo(CreateTodoBean createTodoBean);
+
+    Todo updateTodo(CreateTodoBean createTodoBean);
+
+    Todo deleteById(Long id);
 }

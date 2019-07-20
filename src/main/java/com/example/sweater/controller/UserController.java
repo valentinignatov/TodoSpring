@@ -52,8 +52,14 @@ public class UserController {
         return new ResponseEntity<>(userService.createUserTodo(userId, createTodoBean), HttpStatus.OK);
     }
 
-    // update todo
-    // delete todo
+    @PutMapping(value = {"/{todoId}/todos/update"})
+    public ResponseEntity<Todo> updateTodo(@PathVariable("todoId") Long todoId,
+                                           @RequestBody CreateTodoBean createTodoBean) {
+        return new ResponseEntity<>(userService.updateUserTodo(todoId, createTodoBean), HttpStatus.OK);
+    }
 
-
+    @DeleteMapping(value = {"/{todoId}/todos/delete"})
+    public ResponseEntity<Todo> delete(@PathVariable("todoId") Long todoId) {
+        return new ResponseEntity<>(userService.deleteById(todoId), HttpStatus.OK);
+    }
 }

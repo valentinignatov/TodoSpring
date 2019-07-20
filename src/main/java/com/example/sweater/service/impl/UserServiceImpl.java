@@ -41,12 +41,33 @@ public class UserServiceImpl implements UserService {
     @Override
     public Todo createUserTodo(Long userId, CreateTodoBean createTodoBean) {
 
-        if (!userRepository.findById(userId).isPresent()) {
+        if (userRepository.findById(userId).isPresent()) {
             // throw exception
         }
 
         createTodoBean.setUserId(userId);
 
         return todoService.createTodo(createTodoBean);
+    }
+
+    @Override
+    public Todo updateUserTodo(Long todoId, CreateTodoBean createTodoBean) {
+
+        if (!userRepository.findById(todoId).isPresent()) {
+            // throw exception Don't exist
+        }
+
+        createTodoBean.setUserId(todoId);
+
+        return todoService.updateTodo(createTodoBean);
+    }
+
+    @Override
+    public Todo deleteById(Long id) {
+        if (!userRepository.findById(id).isPresent()) {
+            // throw exception Don't exist
+        }
+
+        return todoService.deleteById(id);
     }
 }
