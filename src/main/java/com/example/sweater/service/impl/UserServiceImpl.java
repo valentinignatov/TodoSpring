@@ -9,6 +9,7 @@ import com.example.sweater.service.TodoService;
 import com.example.sweater.service.UserService;
 import org.springframework.stereotype.Service;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -36,7 +37,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Todo createUserTodo(Long userId, CreateTodoBean createTodoBean) {
-
         if (userRepository.findById(userId).isPresent()) {
             // throw exception
         }
@@ -47,10 +47,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Todo updateUserTodo(Long todoId, CreateTodoBean createTodoBean) {
-
+    public Todo updateUserTodo(Long userId, Long todoId, CreateTodoBean createTodoBean) {
         if (!userRepository.findById(todoId).isPresent()) {
-            // throw exception Don't exist
+            // throw exception Don't exist user
+
+        } else if () {
+
         }
 
         createTodoBean.setUserId(todoId);
@@ -59,7 +61,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Todo deleteById(Long id) {
+    public Todo deleteById(Long userId, Long id) {
         if (!userRepository.findById(id).isPresent()) {
             // throw exception Don't exist
         }

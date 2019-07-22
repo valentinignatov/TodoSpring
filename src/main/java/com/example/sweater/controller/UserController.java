@@ -44,14 +44,16 @@ public class UserController {
         return new ResponseEntity<>(userService.createUserTodo(userId, createTodoBean), HttpStatus.OK);
     }
 
-    @PutMapping(value = {"/{todoId}/todos/update"})
-    public ResponseEntity<Todo> updateTodo(@PathVariable("todoId") Long todoId,
+    @PutMapping(value = {"/{userId}/todos/{todoId}/update"})
+    public ResponseEntity<Todo> updateTodo(@PathVariable("userId") Long userId,
+                                           @PathVariable("todoId") Long todoId,
                                            @RequestBody CreateTodoBean createTodoBean) {
-        return new ResponseEntity<>(userService.updateUserTodo(todoId, createTodoBean), HttpStatus.OK);
+        return new ResponseEntity<>(userService.updateUserTodo(userId, todoId, createTodoBean), HttpStatus.OK);
     }
 
-    @DeleteMapping(value = {"/{todoId}/todos/delete"})
-    public ResponseEntity<Todo> delete(@PathVariable("todoId") Long todoId) {
-        return new ResponseEntity<>(userService.deleteById(todoId), HttpStatus.OK);
+    @DeleteMapping(value = {"/{userId}/todos/{todoId}/delete"})
+    public ResponseEntity<Todo> delete(@PathVariable("userId") Long userId,
+                                       @PathVariable("todoId") Long todoId) {
+        return new ResponseEntity<>(userService.deleteById(userId, todoId), HttpStatus.OK);
     }
 }

@@ -33,7 +33,8 @@ public class TodoController {
     }
 
     @GetMapping(value = "/findByText/{textToFind}")
-    public ResponseEntity<List<Todo>> searchByText(@PathVariable("textToFind") String text) {
-        return new ResponseEntity<>(todoService.findByTextLike(text), HttpStatus.OK);
+    public ResponseEntity<List<Todo>> searchByText(@PathVariable(name = "text", required = false) String text,
+                                                   @PathVariable(name = "tagName", required = false) String tagName) {
+        return new ResponseEntity<>(todoService.findByTextLike(text), HttpStatus.OK); // todo: finish
     }
 }

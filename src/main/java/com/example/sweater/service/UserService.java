@@ -20,9 +20,9 @@ public interface UserService {
 
     Todo createUserTodo(Long userId, CreateTodoBean createTodoBean);
 
-    Todo updateUserTodo(Long todoId, CreateTodoBean createTodoBean);
+    Todo updateUserTodo(Long userId, Long todoId, CreateTodoBean createTodoBean);
 
-    Todo deleteById(Long id);
+    Todo deleteById(Long userId, Long id);
 
     List<UserWithNumberOfTodos> numberOfTodos();
 }
