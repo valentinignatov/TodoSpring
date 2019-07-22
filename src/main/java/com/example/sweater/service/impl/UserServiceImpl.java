@@ -1,6 +1,7 @@
 package com.example.sweater.service.impl;
 
 import com.example.sweater.bean.CreateTodoBean;
+import com.example.sweater.bean.UserWithNumberOfTodos;
 import com.example.sweater.model.Todo;
 import com.example.sweater.model.User;
 import com.example.sweater.repository.UserRepository;
@@ -8,7 +9,7 @@ import com.example.sweater.service.TodoService;
 import com.example.sweater.service.UserService;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,11 +33,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> findById(Long id) { return userRepository.findById(id); }
-
-    @Override
-    public Long howMuchTodos(String name) {
-        return null;
-    }
 
     @Override
     public Todo createUserTodo(Long userId, CreateTodoBean createTodoBean) {
@@ -69,5 +65,20 @@ public class UserServiceImpl implements UserService {
         }
 
         return todoService.deleteById(id);
+    }
+
+    @Override
+    public List<UserWithNumberOfTodos> numberOfTodos() {
+        List<User> temp = findAll();
+        List<UserWithNumberOfTodos> temp1 = new ArrayList<>();
+
+        temp.forEach(user -> {
+            UserWithNumberOfTodos usr = new UserWithNumberOfTodos();
+            usr.setNrOfTodos(todoService.countTodoForUser(user.getId()));
+            usr.setUserName(user.getUsername());
+
+            temp1.add(usr);
+        });
+        return temp1;
     }
 }

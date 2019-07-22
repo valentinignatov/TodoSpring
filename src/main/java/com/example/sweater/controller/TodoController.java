@@ -23,17 +23,17 @@ public class TodoController {
     }
 
     @GetMapping(path = "/all")
-    public ResponseEntity<List<Todo>> findAllUsers() {
+    public ResponseEntity<List<Todo>> findAll() {
         return new ResponseEntity<>(todoService.findAll(), HttpStatus.OK);
     }
 
-    // find by user id
     @GetMapping(value = "/{id}")
     public ResponseEntity<Optional<Todo>> findById(@PathVariable( "id" ) Long id) {
         return new ResponseEntity<>(todoService.findById(id), HttpStatus.OK);
     }
 
-    // update todo
-
-    // delete todo
+    @GetMapping(value = "/findByText/{textToFind}")
+    public ResponseEntity<List<Todo>> searchByText(@PathVariable("textToFind") String text) {
+        return new ResponseEntity<>(todoService.findByTextLike(text), HttpStatus.OK);
+    }
 }

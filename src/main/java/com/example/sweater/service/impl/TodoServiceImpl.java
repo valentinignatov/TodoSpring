@@ -93,4 +93,14 @@ public class TodoServiceImpl implements TodoService {
 
         return null;
     }
+
+    @Override
+    public Long countTodoForUser(Long userId) {
+        return todoRepository.countTodoForUser(userId);
+    }
+
+    @Override
+    public List<Todo> findByTextLike(String text) {
+        return todoRepository.findByTextLike(text);
+    }
 }

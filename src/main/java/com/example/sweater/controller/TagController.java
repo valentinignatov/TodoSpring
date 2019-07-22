@@ -20,7 +20,7 @@ public class TagController {
     }
 
     @RequestMapping(path = "/all")
-    public ResponseEntity<List<Tag>> findAllUsers() {
+    public ResponseEntity<List<Tag>> findAll() {
         return new ResponseEntity<>(tagService.findAll(), HttpStatus.OK);
     }
 }

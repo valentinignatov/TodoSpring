@@ -24,4 +24,8 @@ public interface TodoService {
     Todo updateTodo(CreateTodoBean createTodoBean);
 
     Todo deleteById(Long id);
+
+    Long countTodoForUser(Long userId);
+
+    List<Todo> findByTextLike(String text);
 }
