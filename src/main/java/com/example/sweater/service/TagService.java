@@ -20,4 +20,6 @@ public interface TagService {
     void updateTagforTodo(Long tagId, Long todoId);
 
     void deleteByTodoId(Long id);
+
+    Long findIdByName(String tag);
 }

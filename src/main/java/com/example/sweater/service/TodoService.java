@@ -3,6 +3,7 @@ package com.example.sweater.service;
 import com.example.sweater.bean.CreateTodoBean;
 import com.example.sweater.model.Todo;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,4 +29,8 @@ public interface TodoService {
     Long countTodoForUser(Long userId);
 
     List<Todo> findByTextLike(String text);
+
+    Optional<Todo> checkTodoForUser(Long todoId, Long userId);
+
+    ArrayList<Optional<Todo>> findByTagLike(String tag);
 }

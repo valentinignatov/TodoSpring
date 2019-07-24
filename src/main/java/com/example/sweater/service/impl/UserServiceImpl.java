@@ -7,7 +7,9 @@ import com.example.sweater.model.User;
 import com.example.sweater.repository.UserRepository;
 import com.example.sweater.service.TodoService;
 import com.example.sweater.service.UserService;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -37,10 +39,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Todo createUserTodo(Long userId, CreateTodoBean createTodoBean) {
-        if (userRepository.findById(userId).isPresent()) {
-            // throw exception
-        }
-
         createTodoBean.setUserId(userId);
 
         return todoService.createTodo(createTodoBean);
@@ -48,11 +46,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Todo updateUserTodo(Long userId, Long todoId, CreateTodoBean createTodoBean) {
-        if (!userRepository.findById(todoId).isPresent()) {
-            // throw exception Don't exist user
-
-        } else if () {
-
+        System.out.println("todoService.checkTodoForUser(userId, todoId)"+todoService.checkTodoForUser(userId, todoId));
+        if (!userRepository.findById(userId).isPresent()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+        }
+        if (!todoService.checkTodoForUser(userId, todoId).isPresent()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "This user don't have this TODO");
         }
 
         createTodoBean.setUserId(todoId);
@@ -61,26 +60,29 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Todo deleteById(Long userId, Long id) {
-        if (!userRepository.findById(id).isPresent()) {
-            // throw exception Don't exist
+    public Todo deleteById(Long userId, Long todoId) {
+        if (!userRepository.findById(userId).isPresent()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+        }
+        if (!todoService.checkTodoForUser(userId, todoId).isPresent()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "This user don't have this TODO");
         }
 
-        return todoService.deleteById(id);
+        return todoService.deleteById(todoId);
     }
 
     @Override
     public List<UserWithNumberOfTodos> numberOfTodos() {
-        List<User> temp = findAll();
-        List<UserWithNumberOfTodos> temp1 = new ArrayList<>();
+        List<User> userList = findAll();
+        List<UserWithNumberOfTodos> userWithTodoNr = new ArrayList<>();
 
-        temp.forEach(user -> {
+        userList.forEach(user -> {
             UserWithNumberOfTodos usr = new UserWithNumberOfTodos();
             usr.setNrOfTodos(todoService.countTodoForUser(user.getId()));
             usr.setUserName(user.getUsername());
 
-            temp1.add(usr);
+            userWithTodoNr.add(usr);
         });
-        return temp1;
+        return userWithTodoNr;
     }
 }

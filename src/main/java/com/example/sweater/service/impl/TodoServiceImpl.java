@@ -1,13 +1,15 @@
 package com.example.sweater.service.impl;
 
 import com.example.sweater.bean.CreateTodoBean;
-import com.example.sweater.model.Tag;
 import com.example.sweater.model.Todo;
 import com.example.sweater.repository.TodoRepository;
 import com.example.sweater.service.TagService;
 import com.example.sweater.service.TodoService;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,49 +41,43 @@ public class TodoServiceImpl implements TodoService {
 
     @Override
     public Todo createTodo(CreateTodoBean createTodoBean) {
-        Optional<String> foundTodo = todoRepository.findByText(createTodoBean.getText());
-        Optional<Tag> foundTag = tagService.findById(createTodoBean.getTagId());
 
         Todo savedTodo = new Todo();
         savedTodo.setUserId(createTodoBean.getUserId());
         savedTodo.setText(createTodoBean.getText());
 
-        if (foundTodo.isPresent()) {
-            //Throw  exept
-
-        } else if (foundTag.isPresent()) {
-            todoRepository.save(savedTodo);
-
-            tagService.addTagForTodo(createTodoBean.getTagId(),todoRepository.getIdByText(savedTodo.getText()));
-
-            savedTodo.setText(savedTodo.getText()+" SUCCESFULY ADDED");
+        if (todoRepository.findByText(createTodoBean.getText()).isPresent()) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Todo allready exists");
         }
+        if (!tagService.findById(createTodoBean.getTagId()).isPresent()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No such tag to add for todo");
+        }
+        todoRepository.save(savedTodo);
 
-        // check if exists by id
+        tagService.addTagForTodo(createTodoBean.getTagId(),todoRepository.getIdByText(savedTodo.getText()));
 
-        savedTodo.toString();
+        savedTodo.setText(savedTodo.getText());
 
         return savedTodo;
     }
 
     @Override
     public Todo updateTodo(CreateTodoBean createTodoBean) {
-        Optional<Tag> foundTag = tagService.findById(createTodoBean.getTagId());
 
         Todo updateTodo = new Todo();
         updateTodo.setUserId(createTodoBean.getUserId());
         updateTodo.setText(createTodoBean.getText());
 
-
-        if (todoRepository.existsById(createTodoBean.getUserId()) && foundTag.isPresent()) {
-            tagService.updateTagforTodo(createTodoBean.getTagId(), createTodoBean.getUserId());
+        if (!todoRepository.existsById(createTodoBean.getUserId())) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No such todo to update");
         }
-
-        if (todoRepository.existsById(createTodoBean.getUserId()) && foundTag.isPresent()) {
-            //createTodoBean.getUserId() contains todoId
-
-            todoRepository.updateById(createTodoBean.getText(), createTodoBean.getUserId());
+        if (!tagService.findById(createTodoBean.getTagId()).isPresent()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No such tag to update");
         }
+        //createTodoBean.getUserId() contains todoId
+        tagService.updateTagforTodo(createTodoBean.getTagId(), createTodoBean.getUserId());
+        todoRepository.updateById(createTodoBean.getText(), createTodoBean.getUserId());
+
         return updateTodo;
     }
 
@@ -102,5 +98,15 @@ public class TodoServiceImpl implements TodoService {
     @Override
     public List<Todo> findByTextLike(String text) {
         return todoRepository.findByTextLike(text);
+    }
+
+    @Override
+    public Optional<Todo> checkTodoForUser(Long todoId, Long userId) { return todoRepository.checkTodoForUser(todoId, userId); }
+
+    @Override
+    public ArrayList<Optional<Todo>> findByTagLike(String tag) {
+        Long id = tagService.findIdByName(tag);
+
+        return todoRepository.findByTagId(id);
     }
 }

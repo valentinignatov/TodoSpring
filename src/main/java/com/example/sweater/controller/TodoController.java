@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -33,8 +34,13 @@ public class TodoController {
     }
 
     @GetMapping(value = "/findByText/{textToFind}")
-    public ResponseEntity<List<Todo>> searchByText(@PathVariable(name = "text", required = false) String text,
-                                                   @PathVariable(name = "tagName", required = false) String tagName) {
-        return new ResponseEntity<>(todoService.findByTextLike(text), HttpStatus.OK); // todo: finish
+    public ResponseEntity<List<Todo>> searchByText(@PathVariable("textToFind") String text) {
+        return new ResponseEntity<>(todoService.findByTextLike(text), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/findByTag/{textToFind}")
+    public ResponseEntity<ArrayList<Optional<Todo>>> searchByTag(@PathVariable(name = "textToFind", required = false) String tag,
+                                                                 @PathVariable(name = "tagName", required = false) String tagName) {
+        return new ResponseEntity<>(todoService.findByTagLike(tag), HttpStatus.OK);
     }
 }

@@ -22,7 +22,7 @@ public interface UserService {
 
     Todo updateUserTodo(Long userId, Long todoId, CreateTodoBean createTodoBean);
 
-    Todo deleteById(Long userId, Long id);
+    Todo deleteById(Long userId, Long todoId);
 
     List<UserWithNumberOfTodos> numberOfTodos();
 }

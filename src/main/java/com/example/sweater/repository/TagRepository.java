@@ -7,7 +7,10 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 public interface TagRepository extends JpaRepository<Tag, Long>, TagCustomRepository {
+    TagCustomRepository tagCustomRepository = null;
 
     @Modifying
     @Transactional
@@ -23,4 +26,6 @@ public interface TagRepository extends JpaRepository<Tag, Long>, TagCustomReposi
     @Transactional
     @Query(value = "delete from todos_to_tags where todo_id = ?1", nativeQuery = true)
     void deleteByTodoId(Long id);
+
+    List<Long> findIdByName(String tag);
 }
