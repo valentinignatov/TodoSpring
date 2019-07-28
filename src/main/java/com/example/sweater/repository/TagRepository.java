@@ -28,4 +28,6 @@ public interface TagRepository extends JpaRepository<Tag, Long>, TagCustomReposi
     void deleteByTodoId(Long id);
 
     List<Long> findIdByName(String tag);
+
+    List<Tag> findByNameLike(String tag);
 }

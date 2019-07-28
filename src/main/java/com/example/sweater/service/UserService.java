@@ -1,6 +1,7 @@
 package com.example.sweater.service;
 
 import com.example.sweater.bean.CreateTodoBean;
+import com.example.sweater.bean.UserBean;
 import com.example.sweater.bean.UserWithNumberOfTodos;
 import com.example.sweater.model.Todo;
 import com.example.sweater.model.User;
@@ -25,4 +26,6 @@ public interface UserService {
     Todo deleteById(Long userId, Long todoId);
 
     List<UserWithNumberOfTodos> numberOfTodos();
+
+    List<UserBean> findAllUserBean();
 }

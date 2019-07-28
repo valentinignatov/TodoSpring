@@ -1,6 +1,7 @@
 package com.example.sweater.service.impl;
 
 import com.example.sweater.bean.CreateTodoBean;
+import com.example.sweater.bean.UserBean;
 import com.example.sweater.bean.UserWithNumberOfTodos;
 import com.example.sweater.model.Todo;
 import com.example.sweater.model.User;
@@ -11,7 +12,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -84,5 +84,25 @@ public class UserServiceImpl implements UserService {
             userWithTodoNr.add(usr);
         });
         return userWithTodoNr;
+    }
+
+    @Override
+    public List<UserBean> findAllUserBean() {
+        List<UserBean> userBeans = new ArrayList<>();
+        List<User> users = userRepository.findAll();
+        List<UserWithNumberOfTodos> userWithNumberOfTodos = numberOfTodos();
+
+        for (int i = 0; i < userWithNumberOfTodos.size(); i++) {
+            UserBean userBean = new UserBean();
+
+            userBean.setId(users.get(i).getId());
+            userBean.setUsername(users.get(i).getUsername());
+            userBean.setNrOfTodos(userWithNumberOfTodos.get(i).getNrOfTodos());
+            userBean.setCreatedOn(users.get(i).getCreatedOn());
+
+            userBeans.add(userBean);
+        }
+
+        return userBeans;
     }
 }

@@ -38,6 +38,7 @@ public class TodoController {
         return new ResponseEntity<>(todoService.findByTextLike(text), HttpStatus.OK);
     }
 
+    //mutat in tagcontroler si facut cu requestparam
     @GetMapping(value = "/findByTag/{textToFind}")
     public ResponseEntity<ArrayList<Optional<Todo>>> searchByTag(@PathVariable(name = "textToFind", required = false) String tag,
                                                                  @PathVariable(name = "tagName", required = false) String tagName) {

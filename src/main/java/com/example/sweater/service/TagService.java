@@ -11,7 +11,7 @@ public interface TagService {
      * find all tag list
      * @return
      */
-    List<Tag> findAll();
+    List<Tag> findAll(String textToFind, String tagName);
 
     Optional<Tag> findById(Long id);
 

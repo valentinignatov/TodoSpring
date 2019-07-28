@@ -2,7 +2,7 @@ package com.example.sweater.controller;
 
 
 import com.example.sweater.bean.CreateTodoBean;
-import com.example.sweater.bean.UserWithNumberOfTodos;
+import com.example.sweater.bean.UserBean;
 import com.example.sweater.model.Todo;
 import com.example.sweater.model.User;
 import com.example.sweater.service.UserService;
@@ -23,19 +23,14 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping(path = "/all")
-    public ResponseEntity<List<User>> findAll() {
-        return new ResponseEntity<>(userService.findAll(), HttpStatus.OK);
+    @GetMapping(path = "/findAll")
+    public ResponseEntity<List<UserBean>> findAll() {
+        return new ResponseEntity<>(userService.findAllUserBean(), HttpStatus.OK);
     }
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Optional<User>> findById(@PathVariable( "id" ) Long id) {
         return new ResponseEntity<>(userService.findById(id), HttpStatus.OK);
-    }
-
-    @GetMapping(path = "/todos")
-    public ResponseEntity<List<UserWithNumberOfTodos>> countTodosForUser() {
-        return new ResponseEntity<>(userService.numberOfTodos(), HttpStatus.OK);
     }
 
     @PostMapping(value = "/{userId}/todos/add")

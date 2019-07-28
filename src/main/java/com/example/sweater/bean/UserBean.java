@@ -7,13 +7,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class UserWithNumberOfTodos {
+public class UserBean {
 
-    private String userName;
+    private Long id;
+
+    private String username;
 
     private Long nrOfTodos;
 
-    public Long getNrOfTodos() {
-        return nrOfTodos;
-    }
+    private String createdOn;
+
 }

@@ -28,7 +28,7 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
     @Query(value = "select count (text) from todos where user_id = ?1", nativeQuery = true)
     Long countTodoForUser(Long userId);
 
-    @Query(value = "select * from todos where text like %?1%", nativeQuery = true)
+    //@Query(value = "select * from todos where text like %?1%", nativeQuery = true)
     List<Todo> findByTextLike(String text);
 
     @Query("select p from Todo p where id = ?2 and userId = ?1")
@@ -37,4 +37,5 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
     @Query(value = "select todos.id, todos.user_id, todos.text, todos.created_on, todos.updated_on from todos, todos_to_tags " +
             "where todos_to_tags.tag_id = ?1 and todos.id = todos_to_tags.todo_id", nativeQuery = true)
     ArrayList<Optional<Todo>> findByTagId(Long id);
+
 }
