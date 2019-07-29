@@ -5,6 +5,7 @@ import com.example.sweater.model.Todo;
 import com.example.sweater.repository.TodoRepository;
 import com.example.sweater.service.TagService;
 import com.example.sweater.service.TodoService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class TodoServiceImpl implements TodoService {
 
     private TodoRepository todoRepository;
@@ -27,9 +29,7 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
-    public List<Todo> findAll() {
-        return todoRepository.findAll();
-    }
+    public List<Todo> findAll() { return todoRepository.findAll(); }
 
     @Override
     public Optional<Todo> findById(Long id) {
@@ -104,9 +104,36 @@ public class TodoServiceImpl implements TodoService {
     public Optional<Todo> checkTodoForUser(Long todoId, Long userId) { return todoRepository.checkTodoForUser(todoId, userId); }
 
     @Override
-    public ArrayList<Optional<Todo>> findByTagLike(String tag) {
+    public List<Todo> findByTagLike(String tag) {
         Long id = tagService.findIdByName(tag);
 
         return todoRepository.findByTagId(id);
+    }
+
+    @Override
+    public List<Todo> search(String textToFind, String tagName) {
+        List<Todo> finalTodos = new ArrayList<>();
+
+        if (!todoRepository.findByTextLike(textToFind).isEmpty() && !tagService.findAllByName(tagName).isEmpty()) {
+            List<Todo> todos = new ArrayList<>();
+
+            for (int i = 0; i < todoRepository.findByTagId(tagService.findIdByName(tagName)).size(); i++) {
+                int finalI = i;
+                todoRepository.findByTextLike(textToFind).forEach(todo -> {
+                    if (todoRepository.findByTagId(tagService.findIdByName(tagName)).get(finalI).
+                            equals(todo)) {
+                        todos.add(todo);
+                    }
+                });
+            }
+            finalTodos = todos;
+        }
+        else if (!todoRepository.findByTextLike(textToFind).isEmpty())
+            finalTodos = todoRepository.findByTextLike(textToFind);
+
+        else if (!tagService.findAllByName(tagName).isEmpty()) {
+            finalTodos = todoRepository.findByTagId(tagService.findIdByName(tagName));
+        }
+        return finalTodos;
     }
 }

@@ -7,11 +7,9 @@ import java.util.Optional;
 
 public interface TagService {
 
-    /**
-     * find all tag list
-     * @return
-     */
-    List<Tag> findAll(String textToFind, String tagName);
+    List<Tag> findAll();
+
+    List<Tag> findAllByName(String tagName);
 
     Optional<Tag> findById(Long id);
 

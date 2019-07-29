@@ -35,7 +35,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Optional<User> findById(Long id) { return userRepository.findById(id); }
+    public Optional<User> findById(Long id) {
+        if (!userRepository.findById(id).isPresent()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+        }
+        return userRepository.findById(id);
+    }
 
     @Override
     public Todo createUserTodo(Long userId, CreateTodoBean createTodoBean) {

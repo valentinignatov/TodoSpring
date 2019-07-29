@@ -3,7 +3,6 @@ package com.example.sweater.service;
 import com.example.sweater.bean.CreateTodoBean;
 import com.example.sweater.model.Todo;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,10 +11,6 @@ public interface TodoService {
 
     Todo save(Todo todo);
 
-    /**
-     * find all todo list
-     * @return
-     */
     List<Todo> findAll();
 
     Optional<Todo> findById(Long id);
@@ -32,5 +27,7 @@ public interface TodoService {
 
     Optional<Todo> checkTodoForUser(Long todoId, Long userId);
 
-    ArrayList<Optional<Todo>> findByTagLike(String tag);
+    List<Todo> findByTagLike(String tag);
+
+    List<Todo> search(String textToFind, String tagName);
 }
