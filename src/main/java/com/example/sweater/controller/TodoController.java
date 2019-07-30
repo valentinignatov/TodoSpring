@@ -31,8 +31,8 @@ public class TodoController {
 
     @GetMapping("/search")
     public ResponseEntity<List<Todo>> search(
-            @RequestParam(name = "textToFind", required = false, defaultValue = "XXXXXXX") String textToFind,
-            @RequestParam(name = "tagName", required = false, defaultValue = "XXXXXXX") String tagName) {
+            @RequestParam(name = "textToFind", required = false) String textToFind,
+            @RequestParam(name = "tagName", required = false) String tagName) {
         return new ResponseEntity<>(todoService.search(textToFind, tagName), HttpStatus.OK);
     }
 }

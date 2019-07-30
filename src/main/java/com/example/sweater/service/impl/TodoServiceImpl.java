@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Service
 @Slf4j
+@Service
 public class TodoServiceImpl implements TodoService {
 
     private TodoRepository todoRepository;
@@ -112,6 +112,9 @@ public class TodoServiceImpl implements TodoService {
 
     @Override
     public List<Todo> search(String textToFind, String tagName) {
+        return todoRepository.search(textToFind, tagName);
+
+    /*
         List<Todo> finalTodos = new ArrayList<>();
 
         if (!todoRepository.findByTextLike(textToFind).isEmpty() && !tagService.findAllByName(tagName).isEmpty()) {
@@ -135,5 +138,6 @@ public class TodoServiceImpl implements TodoService {
             finalTodos = todoRepository.findByTagId(tagService.findIdByName(tagName));
         }
         return finalTodos;
+        */
     }
 }

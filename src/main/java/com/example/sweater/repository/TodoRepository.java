@@ -1,6 +1,7 @@
 package com.example.sweater.repository;
 
 import com.example.sweater.model.Todo;
+import com.example.sweater.repository.custom.TodoCustomRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -9,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-public interface TodoRepository extends JpaRepository<Todo, Long> {
+public interface TodoRepository extends JpaRepository<Todo, Long>, TodoCustomRepository {
     @Query(value = "select max(id) from todos",nativeQuery = true)
     Long findMaxId();
 
@@ -40,5 +41,4 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
     @Query(value = "select todos.id, todos.user_id, todos.text, todos.created_on, todos.updated_on from todos, todos_to_tags " +
             "where todos_to_tags.tag_id = ?1 and todos.id = todos_to_tags.todo_id", nativeQuery = true)
     List<Todo> findByTagId(Long id);
-
 }
