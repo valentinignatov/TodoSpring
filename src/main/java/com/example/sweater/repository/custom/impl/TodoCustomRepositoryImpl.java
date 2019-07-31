@@ -17,27 +17,23 @@ public class TodoCustomRepositoryImpl implements TodoCustomRepository {
 
     @Override
     public List<Todo> search(String textToFind, String tagName) {
+        String testSql = "select * from todos";
 
-        String sql = "SELECT * FROM todos ";
-
-        Query query = entityManager.createNativeQuery(sql);
-
-        if (textToFind != null) {
-            // todo: build query
-
-            sql = sql + " where text LIKE ?";
-            query.setParameter(1, textToFind);
-
+        if (textToFind != null && tagName != null) {
+            testSql = "select * from todos left join todos_to_tags on todos.id = todos_to_tags.todo_id left join tags on todos_to_tags.tag_id = tags.id where tags.tag_name like '%" + tagName + "%' and text like '%" + textToFind + "%'";
         }
 
-        if (tagName != null) {
-            // todo: build query
-            sql = sql + " join todo_to_tags on todo_to_tags.todo_id = tag.id " +
-                    "where tag.name = ?";
-
-            query.setParameter(2, tagName);
-
+        else if (textToFind != null) {
+            testSql = "select * from todos where text like '%" + textToFind + "%'";
         }
+
+        else if (tagName != null) {
+            testSql = "select * from todos" +
+                    " left join todos_to_tags on todos.id = todos_to_tags.todo_id" +
+                    " left join tags on todos_to_tags.tag_id = tags.id" +
+                    " where tags.tag_name like '%" + tagName + "%'";
+        }
+        Query query = entityManager.createNativeQuery(testSql, Todo.class);
 
         return query.getResultList();
     }
