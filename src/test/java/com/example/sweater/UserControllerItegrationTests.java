@@ -86,7 +86,6 @@ public class UserControllerItegrationTests {
         Long id = todoService.search("_Making TEST", "not").get(0).getId() ;
 
         //Update request
-
         CreateTodoBean updateTodo = mockbean(1L, 1L);
         byte[] updateTodoJson = toJson(updateTodo);
 
@@ -101,9 +100,6 @@ public class UserControllerItegrationTests {
                 .andReturn();
 
         resultUpdate.getResponse();
-
-        System.out.println(">>>>>>>>>>>>>>>>Update" + resultUpdate.getResponse());
-
 
         //Delete request
         MvcResult resultDelete = mockMvc.perform(delete("/users/{userId}/todos/{todoId}/delete",
