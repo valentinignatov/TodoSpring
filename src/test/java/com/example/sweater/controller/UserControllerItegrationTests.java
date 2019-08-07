@@ -1,7 +1,6 @@
-package com.example.sweater;
+package com.example.sweater.controller;
 
 import com.example.sweater.bean.CreateTodoBean;
-import com.example.sweater.controller.UserController;
 import com.example.sweater.service.TodoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.Matchers;
@@ -86,7 +85,6 @@ public class UserControllerItegrationTests {
         Long id = todoService.search("_Making TEST", "not").get(0).getId() ;
 
         //Update request
-
         CreateTodoBean updateTodo = mockbean(1L, 1L);
         byte[] updateTodoJson = toJson(updateTodo);
 
@@ -101,9 +99,6 @@ public class UserControllerItegrationTests {
                 .andReturn();
 
         resultUpdate.getResponse();
-
-        System.out.println(">>>>>>>>>>>>>>>>Update" + resultUpdate.getResponse());
-
 
         //Delete request
         MvcResult resultDelete = mockMvc.perform(delete("/users/{userId}/todos/{todoId}/delete",
@@ -134,5 +129,4 @@ public class UserControllerItegrationTests {
         String[] parts = locationUrl.split(",");
         return Long.valueOf(parts[parts.length - 1]);
     }
-
 }
