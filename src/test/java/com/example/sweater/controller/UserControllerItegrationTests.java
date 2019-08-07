@@ -1,7 +1,6 @@
-package com.example.sweater;
+package com.example.sweater.controller;
 
 import com.example.sweater.bean.CreateTodoBean;
-import com.example.sweater.controller.UserController;
 import com.example.sweater.service.TodoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.Matchers;
@@ -130,5 +129,4 @@ public class UserControllerItegrationTests {
         String[] parts = locationUrl.split(",");
         return Long.valueOf(parts[parts.length - 1]);
     }
-
 }
