@@ -31,7 +31,7 @@ CREATE TABLE todos_to_tags(
 insert into tags (tag_name)
 values
 	('not important'),
-	('medium'),
+	('medium'),1L
 	('high importance'); 
 
 insert into users (user_name)
