@@ -173,7 +173,7 @@ public class UserServiceUnitTest {
 
         val result = mockUserService.findAllUserBean();
 
-        verify(mockUserRepository,times(1)).findAll();
+        verify(mockUserRepository, times(1)).findAll();
         verify(mockTodoService, times(1)).countTodoForUser(anyLong());
 
         assertNotNull(result);
