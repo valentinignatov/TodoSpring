@@ -13,7 +13,7 @@ public interface TodoService {
 
     List<Todo> findAll();
 
-    Optional<Todo> findById(Long id);
+    Todo findById(Long id);
 
     Todo createTodo(CreateTodoBean createTodoBean);
 

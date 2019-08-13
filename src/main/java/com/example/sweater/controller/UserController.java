@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/users")
@@ -29,7 +28,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Optional<User>> findById(@PathVariable( "id" ) Long id) {
+    public ResponseEntity<User> findById(@PathVariable( "id" ) Long id) {
         return new ResponseEntity<>(userService.findById(id), HttpStatus.OK);
     }
 

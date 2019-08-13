@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/todos")
@@ -25,7 +24,7 @@ public class TodoController {
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Optional<Todo>> findById(@PathVariable( "id" ) Long id) {
+    public ResponseEntity<Todo> findById(@PathVariable( "id" ) Long id) {
         return new ResponseEntity<>(todoService.findById(id), HttpStatus.OK);
     }
 

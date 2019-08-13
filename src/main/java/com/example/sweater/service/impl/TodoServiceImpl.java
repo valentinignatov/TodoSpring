@@ -31,8 +31,9 @@ public class TodoServiceImpl implements TodoService {
     public List<Todo> findAll() { return todoRepository.findAll(); }
 
     @Override
-    public Optional<Todo> findById(Long id) {
-        return todoRepository.findById(id);
+    public Todo findById(Long id) {
+        return todoRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Todo not found"));
     }
 
     @Override
