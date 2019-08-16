@@ -20,6 +20,7 @@ public class User {
     @Column(name = "user_name")
     private String username;
 
+    //@CreationTimestamp
     @Column(name = "created_on")
     private String createdOn;
 }

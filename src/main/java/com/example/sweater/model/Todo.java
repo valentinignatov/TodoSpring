@@ -1,6 +1,7 @@
 package com.example.sweater.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 @Entity
 @Table(name = "todos")
 public class Todo {
@@ -25,6 +27,7 @@ public class Todo {
     @Column(name = "text")
     private String text;
 
+//    @CreationTimestamp
     @Column(name = "created_on")
     private Date createdOn;
 

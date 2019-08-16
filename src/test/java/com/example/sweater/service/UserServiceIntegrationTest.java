@@ -6,7 +6,6 @@ import com.example.sweater.model.User;
 import com.example.sweater.repository.TodoRepository;
 import com.example.sweater.service.impl.FileReaderServiceImpl;
 import lombok.val;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,8 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -44,19 +42,19 @@ public class UserServiceIntegrationTest {
     public void findAll() {
         List<User> users = userService.findAll();
 
-        Assert.assertNotNull(users);
-        Assert.assertNotNull(users.stream().findFirst().get().getId());
-        Assert.assertEquals(users.stream().findFirst().get().getId().longValue(), 1L);
+        assertNotNull(users);
+        assertNotNull(users.stream().findFirst().get().getId());
+        assertEquals(users.stream().findFirst().get().getId().longValue(), 1L);
     }
 
     @Test
     public void findById() {
         User foundUser = userService.findById(1L);
 
-        Assert.assertNotNull(foundUser);
-        Assert.assertNotNull(foundUser.getId());
-        Assert.assertEquals(foundUser.getId().longValue(), 1L);
-        Assert.assertEquals(foundUser.getUsername(),"victor");
+        assertNotNull(foundUser);
+        assertNotNull(foundUser.getId());
+        assertEquals(foundUser.getId().longValue(), 1L);
+        assertEquals(foundUser.getUsername(),"victor");
     }
 
     @Test
@@ -70,10 +68,10 @@ public class UserServiceIntegrationTest {
 
         Todo createdTodo = userService.createUserTodo(userId, createTodoBean);
 
-        Assert.assertNotNull(createdTodo);
-        Assert.assertNotNull(createdTodo.getId());
-        Assert.assertEquals(createdTodo.getUserId(), createTodoBean.getUserId());
-        Assert.assertEquals(createdTodo.getText(), createTodoBean.getText());
+        assertNotNull(createdTodo);
+        assertNotNull(createdTodo.getId());
+        assertEquals(createdTodo.getUserId(), createTodoBean.getUserId());
+        assertEquals(createdTodo.getText(), createTodoBean.getText());
     }
 
     @Test
@@ -87,9 +85,9 @@ public class UserServiceIntegrationTest {
 
         Todo updatedTodo = userService.updateUserTodo(userId, 1L,createTodoBean);
 
-        Assert.assertNotNull(updatedTodo);
-        Assert.assertEquals(updatedTodo.getUserId(), createTodoBean.getUserId());
-        Assert.assertEquals(updatedTodo.getText(), createTodoBean.getText());
+        assertNotNull(updatedTodo);
+        assertEquals(updatedTodo.getUserId(), createTodoBean.getUserId());
+        assertEquals(updatedTodo.getText(), createTodoBean.getText());
     }
 
     @Test
@@ -101,7 +99,7 @@ public class UserServiceIntegrationTest {
 
         val countAfter = todoRepository.count();
 
-        Assert.assertTrue(countBefore > countAfter);
+        assertTrue(countBefore > countAfter);
     }
 
     @Test

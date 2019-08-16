@@ -43,7 +43,7 @@ public class TodoControllerIntegrationTests {
 
     @Test
     public void findByIdTest() throws Exception {
-        int id = 1;
+        int id = 2;
         this.mockMvc.perform(get("/todos/{id}", id))
                 .andDo(print())
                 .andExpect(status().isOk())

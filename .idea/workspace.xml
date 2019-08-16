@@ -2,13 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14d59939-88fe-4bf8-b3ae-62870db711a8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/service/TodoServiceIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/service/TodoServiceUnitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/bean/CreateTodoBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/bean/CreateTodoBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/bean/UserWithNumberOfTodos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/model/Todo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/model/Todo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/TodoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/TodoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/TagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/impl/TagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/impl/TodoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/impl/TodoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/sweater/controller/TodoControllerIntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/controller/TodoControllerIntegrationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/sweater/service/UserServiceIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/service/UserServiceIntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/sweater/service/UserServiceUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/service/UserServiceUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/bean/CreateTodoBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/bean/CreateTodoBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/bean/UserWithNumberOfTodos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/model/Todo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/model/Todo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/TodoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/TodoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/service/TagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/service/TagService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/service/impl/TagServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/service/impl/TagServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/service/impl/TodoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/service/impl/TodoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/sweater/controller/TodoControllerIntegrationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/sweater/controller/TodoControllerIntegrationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/sweater/service/UserServiceIntegrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/sweater/service/UserServiceIntegrationTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +40,8 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -62,8 +74,12 @@
       <recent name="com.example.sweater.service" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.sweater.service" />
       <recent name="com.example.sweater.controller" />
       <recent name="com.example.sweater" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.sweater.service" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -81,21 +97,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceIntegrationTest.findAllUserBean">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.Application" />
+  <component name="RunManager" selected="JUnit.TodoServiceIntegrationTest.search">
+    <configuration name="TodoControllerIntegrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sweater" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sweater.*" />
+          <option name="PATTERN" value="com.example.sweater.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.example.sweater.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.sweater.controller.TodoControllerIntegrationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceIntegrationTest.deleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sweater" />
       <extension name="coverage">
         <pattern>
@@ -104,14 +122,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.sweater.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.UserServiceIntegrationTest" />
-      <option name="METHOD_NAME" value="deleteById" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.TodoServiceIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceIntegrationTest.findAllUserBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoServiceIntegrationTest.findByTagLike" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sweater" />
       <extension name="coverage">
         <pattern>
@@ -120,14 +137,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.sweater.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.UserServiceIntegrationTest" />
-      <option name="METHOD_NAME" value="findAllUserBean" />
+      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.TodoServiceIntegrationTest" />
+      <option name="METHOD_NAME" value="findByTagLike" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceIntegrationTest.updateUserTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoServiceIntegrationTest.search" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sweater" />
       <extension name="coverage">
         <pattern>
@@ -136,36 +153,34 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.sweater.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.UserServiceIntegrationTest" />
-      <option name="METHOD_NAME" value="updateUserTodo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.TodoServiceIntegrationTest" />
+      <option name="METHOD_NAME" value="search" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceUnitTest.findAllUserBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.example.sweater.controller in sweater" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sweater" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sweater.service.*" />
+          <option name="PATTERN" value="com.example.sweater.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.sweater.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.UserServiceUnitTest" />
-      <option name="METHOD_NAME" value="findAllUserBean" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.sweater.controller" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserServiceIntegrationTest.findAllUserBean" />
-        <item itemvalue="JUnit.UserServiceUnitTest.findAllUserBean" />
-        <item itemvalue="Application.Application" />
-        <item itemvalue="JUnit.UserServiceIntegrationTest.deleteById" />
-        <item itemvalue="JUnit.UserServiceIntegrationTest.updateUserTodo" />
+        <item itemvalue="JUnit.TodoServiceIntegrationTest.search" />
+        <item itemvalue="JUnit.TodoServiceIntegrationTest.findByTagLike" />
+        <item itemvalue="JUnit.com.example.sweater.controller in sweater" />
+        <item itemvalue="JUnit.TodoServiceIntegrationTest" />
+        <item itemvalue="JUnit.TodoControllerIntegrationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -194,6 +209,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/example/sweater/service/TodoServiceIntegrationTest.java</url>
+          <line>185</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>

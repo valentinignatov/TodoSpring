@@ -99,13 +99,13 @@ public class UserServiceUnitTest {
 
         val mockUserService = new UserServiceImpl(mockUserRepository, mockTodoService);
 
-        when(mockUserRepository.findById(anyLong())) //verify findById(userId);
+        when(mockUserRepository.findById(anyLong()))
                 .thenReturn(Optional.of(mockUser));
 
-        when(mockTodo.getUserId())  // Objects.equals(foundTodo.getUserId()
+        when(mockTodo.getUserId())
                 .thenReturn(userId);
 
-        when(mockTodoService.findById(anyLong())) // verify foundTodo = todoService.findById(todoId);
+        when(mockTodoService.findById(anyLong()))
                 .thenReturn(mockTodo);
 
         when(mockTodoService.updateTodo(mockCreateTodoBean))

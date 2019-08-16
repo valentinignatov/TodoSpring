@@ -3,7 +3,6 @@ package com.example.sweater.service;
 import com.example.sweater.model.Tag;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface TagService {
 
@@ -11,7 +10,7 @@ public interface TagService {
 
     List<Tag> findAllByName(String tagName);
 
-    Optional<Tag> findById(Long id);
+    Tag findById(Long id);
 
     void addTagForTodo(Long tagId, Long todoId);
 

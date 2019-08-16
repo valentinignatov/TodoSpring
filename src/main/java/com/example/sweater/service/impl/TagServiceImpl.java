@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Slf4j
@@ -28,7 +27,10 @@ public class TagServiceImpl implements TagService {
     public List<Tag> findAllByName(String tagName) { return tagRepository.findByNameLike(tagName); }
 
     @Override
-    public Optional<Tag> findById(Long id) {return tagRepository.findById(id); }
+    public Tag findById(Long id) {
+        return tagRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No such tag to add for todo"));
+    }
 
     @Override
     public void addTagForTodo(Long tagId, Long todoId) { tagRepository.addTagForTodo(tagId, todoId); }

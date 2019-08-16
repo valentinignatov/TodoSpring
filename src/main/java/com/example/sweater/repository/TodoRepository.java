@@ -37,4 +37,7 @@ public interface TodoRepository extends JpaRepository<Todo, Long>, TodoCustomRep
     @Query(value = "select todos.id, todos.user_id, todos.text, todos.created_on, todos.updated_on from todos, todos_to_tags " +
             "where todos_to_tags.tag_id = ?1 and todos.id = todos_to_tags.todo_id", nativeQuery = true)
     List<Todo> findByTagId(Long id);
+
+    @Query(value = "select count(*) from todos_to_tags", nativeQuery = true)
+    Long countTodosToTags();
 }
