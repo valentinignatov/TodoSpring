@@ -27,7 +27,7 @@ public interface TodoService {
 
     Optional<Todo> checkTodoForUser(Long todoId, Long userId);
 
-    List<Todo> findByTagLike(String tag);
+//    List<Todo> findByTagLike(String tag);
 
     List<Todo> search(String textToFind, String tagName);
 }

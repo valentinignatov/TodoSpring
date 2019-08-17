@@ -8,7 +8,7 @@ public interface TagService {
 
     List<Tag> findAll();
 
-    List<Tag> findAllByName(String tagName);
+   // List<Tag> findAllByName(String tagName);
 
     Tag findById(Long id);
 
@@ -18,5 +18,5 @@ public interface TagService {
 
     void deleteByTodoId(Long id);
 
-    Long findIdByName(String tag);
+//    Long findIdByName(String tag);
 }

@@ -23,8 +23,8 @@ public class TagServiceImpl implements TagService {
     @Override
     public List<Tag> findAll() { return tagRepository.findAll(); }
 
-    @Override
-    public List<Tag> findAllByName(String tagName) { return tagRepository.findByNameLike(tagName); }
+//    @Override
+//    public List<Tag> findAllByName(String tagName) { return tagRepository.findByNameLike(tagName); }
 
     @Override
     public Tag findById(Long id) {
@@ -41,16 +41,16 @@ public class TagServiceImpl implements TagService {
     @Override
     public void deleteByTodoId(Long id) { tagRepository.deleteByTodoId(id); }
 
-    @Override
-    public Long findIdByName(String tag) {
-        if (tagRepository.findIdByName(tag).size()>1) {
-            throw new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE, "Found more then 1 tag");
-        }
-        if (tagRepository.findIdByName(tag).isEmpty() && !tagRepository.findByNameLike(tag).equals("XXXXXXX")) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No such tag found");
-        }
-
-        Long id = tagRepository.findIdByName(tag).get(0);
-        return id;
-    }
+//    @Override
+//    public Long findIdByName(String tag) {
+//        if (tagRepository.findIdByName(tag).size()>1) {
+//            throw new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE, "Found more then 1 tag");
+//        }
+//        if (tagRepository.findIdByName(tag).isEmpty() && !tagRepository.findByNameLike(tag).equals("XXXXXXX")) {
+//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No such tag found");
+//        }
+//
+//        Long id = tagRepository.findIdByName(tag).get(0);
+//        return id;
+//    }
 }

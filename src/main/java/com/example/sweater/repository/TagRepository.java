@@ -31,4 +31,7 @@ public interface TagRepository extends JpaRepository<Tag, Long>, TagCustomReposi
 
     @Query(value = "select * from tags where tag_name like %?1%", nativeQuery = true)
     List<Tag> findByNameLike(String tag);
+
+//    @Query(value = "select todo_id from todos_to_tags where tag_id = ?1")
+//    List<Long> findByTagId(Long tagId);
 }

@@ -161,20 +161,20 @@ public class TodoServiceIntegrationTest {
         assertEquals(checkTodo.get().getUserId().longValue(), userId);
     }
 
-    @Test
-    public void findByTagLike() {
-        val id = 1L;
-        val userId = 1L;
-        val text = "de maturat";
-
-        val tag = "not";
-        val todos = todoService.findByTagLike(tag);
-
-        assertNotNull(todos);
-        assertEquals(todos.get(0).getId().longValue(), id);
-        assertEquals(todos.get(0).getUserId().longValue(), userId);
-        assertEquals(todos.get(0).getText(), text);
-    }
+//    @Test
+//    public void findByTagLike() {
+//        val id = 1L;
+//        val userId = 1L;
+//        val text = "de maturat";
+//
+//        val tag = "not";
+//        val todos = todoService.findByTagLike(tag);
+//
+//        assertNotNull(todos);
+//        assertEquals(todos.get(0).getId().longValue(), id);
+//        assertEquals(todos.get(0).getUserId().longValue(), userId);
+//        assertEquals(todos.get(0).getText(), text);
+//    }
 
     @Test
     public void search() {

@@ -109,12 +109,12 @@ public class TodoServiceImpl implements TodoService {
         return todoRepository.checkTodoForUser(todoId, userId);
     }
 
-    @Override
-    public List<Todo> findByTagLike(String tag) {
-        Long id = tagService.findIdByName(tag);
-
-        return todoRepository.findByTagId(id);
-    }
+//    @Override
+//    public List<Todo> findByTagLike(String tag) {
+//        Long id = tagService.findIdByName(tag);
+//
+//        return todoRepository.findByTagId(id);
+//    }
 
     @Override
     public List<Todo> search(String textToFind, String tagName) {

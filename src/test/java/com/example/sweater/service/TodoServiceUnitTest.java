@@ -133,6 +133,14 @@ public class TodoServiceUnitTest {
 
     @Test
     public void deleteById() {
+        val mockTodoRepository = mock(TodoRepository.class);
+        val mockTagService = mock(TagService.class);
+        val mockTodoService = new TodoServiceImpl(mockTodoRepository, mockTagService);
+
+        mockTodoService.deleteById(anyLong());
+
+        verify(mockTagService, times(1)).deleteByTodoId(anyLong());
+        verify(mockTodoRepository, times(1)).deleteById(anyLong());
     }
 
     @Test
@@ -186,27 +194,27 @@ public class TodoServiceUnitTest {
         assertEquals(result, mockList);
     }
 
-    @Test
-    public void findByTagLike() {
-        val mockTodoRepository = mock(TodoRepository.class);
-        val mockTagService = mock(TagService.class);
-        val mockTodoService = new TodoServiceImpl(mockTodoRepository, mockTagService);
-        val mockList = Collections.singletonList(mock(Todo.class));
-        Long values = 1L;
-
-        when(mockTagService.findIdByName(anyString()))
-                .thenReturn(values);
-
-        when(mockTodoRepository.findByTagId(anyLong()))
-                .thenReturn(mockList);
-
-        val result = mockTodoService.findByTagLike(anyString());
-
-        verify(mockTagService, times(1)).findIdByName(anyString());
-        verify(mockTodoRepository, times(1)).findByTagId(anyLong());
-        assertNotNull(result);
-        assertEquals(result, mockList);
-    }
+//    @Test
+//    public void findByTagLike() {
+//        val mockTodoRepository = mock(TodoRepository.class);
+//        val mockTagService = mock(TagService.class);
+//        val mockTodoService = new TodoServiceImpl(mockTodoRepository, mockTagService);
+//        val mockList = Collections.singletonList(mock(Todo.class));
+//        Long values = 1L;
+//
+//        when(mockTagService.findIdByName(anyString()))
+//                .thenReturn(values);
+//
+//        when(mockTodoRepository.findByTagId(anyLong()))
+//                .thenReturn(mockList);
+//
+//        val result = mockTodoService.findByTagLike(anyString());
+//
+//        verify(mockTagService, times(1)).findIdByName(anyString());
+//        verify(mockTodoRepository, times(1)).findByTagId(anyLong());
+//        assertNotNull(result);
+//        assertEquals(result, mockList);
+//    }
 
     @Test
     public void search() {
