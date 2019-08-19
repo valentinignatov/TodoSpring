@@ -11,14 +11,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface TodoRepository extends JpaRepository<Todo, Long>, TodoCustomRepository {
-//    @Query(value = "select max(id) from todos",nativeQuery = true)
-//    Long findMaxId();
 
     @Query(value = "select text from todos where text = ?1", nativeQuery = true)
     Optional<String> findByText(String text);
-
-//    @Query(value = "select id from todos where text = ?1", nativeQuery = true)
-//    Long getIdByText (String text);
 
     @Modifying
     @Transactional
@@ -34,13 +29,8 @@ public interface TodoRepository extends JpaRepository<Todo, Long>, TodoCustomRep
     @Query("select p from Todo p where id = ?2 and userId = ?1")
     Optional<Todo> checkTodoForUser(Long todoId, Long userId);
 
-    //    @Query(value = "select todos.id, todos.user_id, todos.text, todos.created_on, todos.updated_on from todos, todos_to_tags " +
-//            "where todos_to_tags.tag_id = ?1 and todos.id = todos_to_tags.todo_id", nativeQuery = true)
-//    List<Todo> findByTagId(Long id);
-//    select todo_id from todos_to_tags where tag_id = ?1
-
     @Query(value = "select tag_id from todos_to_tags where todo_id = ?1", nativeQuery = true)
-    List<Long> verifyTagIdByTodoId(Long id);
+    List<Long> verifyTagIdByTodoId(Long todoId);
 
     @Query(value = "select count(*) from todos_to_tags", nativeQuery = true)
     Long countTodosToTags();

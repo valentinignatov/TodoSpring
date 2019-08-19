@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14d59939-88fe-4bf8-b3ae-62870db711a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/service/TagServiceIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/service/TagServiceUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/repository/TagRepositoryIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/repository/TodoRepositoryIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/repository/custom/TodoCustomRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/TagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/TagRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/TodoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/TodoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/TagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/TodoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/impl/TagServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/impl/TodoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/impl/TodoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/sweater/service/TodoServiceIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/service/TodoServiceIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/sweater/service/TodoServiceUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/service/TodoServiceUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/custom/TagCustomRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/custom/impl/TagCustomRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/TagRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/TagRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/TodoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/TodoRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/service/TagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/service/TagService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/service/TodoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/service/TodoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/service/impl/TagServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/service/impl/TagServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/service/impl/TodoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/service/impl/TodoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/sweater/service/TodoServiceIntegrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/sweater/service/TodoServiceIntegrationTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/sweater/service/TodoServiceUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/sweater/service/TodoServiceUnitTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/custom/TagCustomRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/custom/impl/TagCustomRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/sweater/service/TagServiceIntegrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/sweater/service/TagServiceIntegrationTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +64,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.sweater.repository.custom" />
+      <recent name="com.example.sweater.repository" />
       <recent name="com.example.sweater.service.impl" />
       <recent name="com.example.sweater.service" />
     </key>
@@ -96,96 +93,91 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TagServiceIntegrationTest.updateTagforTodo">
-    <configuration name="TagServiceIntegrationTest.deleteByTodoId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.com.example.sweater.controller in sweater">
+    <configuration name="TodoCustomRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sweater" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sweater.service.*" />
+          <option name="PATTERN" value="com.example.sweater.repository.custom.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.sweater.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.TagServiceIntegrationTest" />
-      <option name="METHOD_NAME" value="deleteByTodoId" />
+      <option name="PACKAGE_NAME" value="com.example.sweater.repository.custom" />
+      <option name="MAIN_CLASS_NAME" value="com.example.sweater.repository.custom.TodoCustomRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoCustomRepositoryTest.search" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sweater" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.sweater.repository.custom.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.sweater.repository.custom" />
+      <option name="MAIN_CLASS_NAME" value="com.example.sweater.repository.custom.TodoCustomRepositoryTest" />
+      <option name="METHOD_NAME" value="search" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TagServiceIntegrationTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoRepositoryIntegrationTest.countTodosToTags" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sweater" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sweater.service.*" />
+          <option name="PATTERN" value="com.example.sweater.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.sweater.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.TagServiceIntegrationTest" />
-      <option name="METHOD_NAME" value="findAll" />
+      <option name="PACKAGE_NAME" value="com.example.sweater.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.sweater.repository.TodoRepositoryIntegrationTest" />
+      <option name="METHOD_NAME" value="countTodosToTags" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TagServiceIntegrationTest.updateTagforTodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoRepositoryIntegrationTest.verifyTagIdByTodoId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sweater" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sweater.service.*" />
+          <option name="PATTERN" value="com.example.sweater.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.sweater.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.TagServiceIntegrationTest" />
-      <option name="METHOD_NAME" value="updateTagforTodo" />
+      <option name="PACKAGE_NAME" value="com.example.sweater.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.sweater.repository.TodoRepositoryIntegrationTest" />
+      <option name="METHOD_NAME" value="verifyTagIdByTodoId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoServiceUnitTest.deleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.example.sweater.controller in sweater" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sweater" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sweater.service.*" />
+          <option name="PATTERN" value="com.example.sweater.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.sweater.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.TodoServiceUnitTest" />
-      <option name="METHOD_NAME" value="deleteById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceUnitTest and 8 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sweater" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <patterns>
-        <pattern testClass="com.example.sweater.service.UserServiceUnitTest" />
-        <pattern testClass="com.example.sweater.service.UserServiceIntegrationTest" />
-        <pattern testClass="com.example.sweater.service.TodoServiceUnitTest" />
-        <pattern testClass="com.example.sweater.service.TodoServiceIntegrationTest" />
-        <pattern testClass="com.example.sweater.service.TagServiceUnitTest" />
-        <pattern testClass="com.example.sweater.service.TagServiceIntegrationTest" />
-        <pattern testClass="com.example.sweater.controller.UserControllerItegrationTests" />
-        <pattern testClass="com.example.sweater.controller.TodoControllerIntegrationTests" />
-        <pattern testClass="com.example.sweater.controller.TagControllerIntegrationTests" />
-      </patterns>
+      <option name="PACKAGE_NAME" value="com.example.sweater.controller" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TagServiceIntegrationTest.updateTagforTodo" />
-        <item itemvalue="JUnit.TagServiceIntegrationTest.findAll" />
-        <item itemvalue="JUnit.TagServiceIntegrationTest.deleteByTodoId" />
-        <item itemvalue="JUnit.UserServiceUnitTest and 8 more" />
-        <item itemvalue="JUnit.TodoServiceUnitTest.deleteById" />
+        <item itemvalue="JUnit.com.example.sweater.controller in sweater" />
+        <item itemvalue="JUnit.TodoCustomRepositoryTest.search" />
+        <item itemvalue="JUnit.TodoCustomRepositoryTest" />
+        <item itemvalue="JUnit.TodoRepositoryIntegrationTest.countTodosToTags" />
+        <item itemvalue="JUnit.TodoRepositoryIntegrationTest.verifyTagIdByTodoId" />
       </list>
     </recent_temporary>
   </component>
