@@ -1,6 +1,6 @@
 
 
-DROP schema public cascade;
+DROP schema public cascade; --databse name todos
 create schema public;
 
 CREATE TABLE users(
@@ -31,7 +31,7 @@ CREATE TABLE todos_to_tags(
 insert into tags (tag_name)
 values
 	('not important'),
-	('medium'),1L
+	('medium'),
 	('high importance'); 
 
 insert into users (user_name)

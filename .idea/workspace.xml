@@ -1,22 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="14d59939-88fe-4bf8-b3ae-62870db711a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/repository/TagRepositoryIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/repository/TodoRepositoryIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/sweater/repository/custom/TodoCustomRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/TagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/TagRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/TodoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/TodoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/custom/TagCustomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/custom/impl/TagCustomRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/TagRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/TagRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/TodoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/TodoRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/custom/TagCustomRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/custom/impl/TagCustomRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/sweater/service/TagServiceIntegrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/sweater/service/TagServiceIntegrationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/TagController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/query.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/query.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/sweater.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/TagController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/TagController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/TodoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/TodoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/sweater.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/query.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/query.txt" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,29 +67,28 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1PL0rIGhTNNKcc6LFm0rt0HiDfm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="/media/valentin/Новый том1/TodoSpring" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -81,19 +114,36 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.com.example.sweater.controller in sweater">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.sweater.Application" />
+      <module name="TodoSpring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.sweater.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TagServiceIntegrationTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TodoSpring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.sweater.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.sweater.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.TagServiceIntegrationTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TodoCustomRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sweater" />
       <extension name="coverage">
@@ -125,38 +175,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoRepositoryIntegrationTest.countTodosToTags" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sweater" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.sweater.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.sweater.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.repository.TodoRepositoryIntegrationTest" />
-      <option name="METHOD_NAME" value="countTodosToTags" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoRepositoryIntegrationTest.verifyTagIdByTodoId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sweater" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.sweater.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.sweater.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.repository.TodoRepositoryIntegrationTest" />
-      <option name="METHOD_NAME" value="verifyTagIdByTodoId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="com.example.sweater.controller in sweater" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sweater" />
       <extension name="coverage">
@@ -173,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.TagServiceIntegrationTest.findAll" />
         <item itemvalue="JUnit.com.example.sweater.controller in sweater" />
         <item itemvalue="JUnit.TodoCustomRepositoryTest.search" />
         <item itemvalue="JUnit.TodoCustomRepositoryTest" />
-        <item itemvalue="JUnit.TodoRepositoryIntegrationTest.countTodosToTags" />
-        <item itemvalue="JUnit.TodoRepositoryIntegrationTest.verifyTagIdByTodoId" />
       </list>
     </recent_temporary>
   </component>
@@ -199,13 +217,46 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2151" height="217" key="GridCell.Tab.0.bottom" timestamp="1595861792599">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state width="2151" height="217" key="GridCell.Tab.0.bottom/0.0.2194.1194@0.0.2194.1194" timestamp="1595861792599" />
+    <state width="2151" height="217" key="GridCell.Tab.0.center" timestamp="1595861792599">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state width="2151" height="217" key="GridCell.Tab.0.center/0.0.2194.1194@0.0.2194.1194" timestamp="1595861792599" />
+    <state width="2151" height="217" key="GridCell.Tab.0.left" timestamp="1595861792599">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state width="2151" height="217" key="GridCell.Tab.0.left/0.0.2194.1194@0.0.2194.1194" timestamp="1595861792599" />
+    <state width="2151" height="217" key="GridCell.Tab.0.right" timestamp="1595861792599">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state width="2151" height="217" key="GridCell.Tab.0.right/0.0.2194.1194@0.0.2194.1194" timestamp="1595861792599" />
+    <state x="628" y="252" key="Maven.ArtifactSearchDialog" timestamp="1595857179928">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="628" y="252" key="Maven.ArtifactSearchDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1595857179928" />
+    <state x="606" y="242" key="SettingsEditor" timestamp="1595852304347">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="606" y="242" key="SettingsEditor/0.0.2194.1194@0.0.2194.1194" timestamp="1595852304347" />
+    <state x="690" y="330" key="Vcs.Push.Dialog.v2" timestamp="1595861864808">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="690" y="330" key="Vcs.Push.Dialog.v2/0.0.2194.1194@0.0.2194.1194" timestamp="1595861864808" />
+    <state x="809" y="196" width="576" height="801" key="find.popup" timestamp="1595850396866">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="809" y="196" width="576" height="801" key="find.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1595850396866" />
   </component>
   <component name="masterDetails">
     <states>
