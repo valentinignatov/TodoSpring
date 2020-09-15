@@ -1,0 +1,54 @@
+-------------------------------------------------------------------------------
+Test set: com.example.sweater.service.TagServiceIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.5 s <<< FAILURE! - in com.example.sweater.service.TagServiceIntegrationTest
+findAll(com.example.sweater.service.TagServiceIntegrationTest)  Time elapsed: 0.139 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.service.TagServiceIntegrationTest.findAll(TagServiceIntegrationTest.java:40)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.service.TagServiceIntegrationTest.findAll(TagServiceIntegrationTest.java:40)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "tags" не существует
+  Position: 64
+	at com.example.sweater.service.TagServiceIntegrationTest.findAll(TagServiceIntegrationTest.java:40)
+
+findById(com.example.sweater.service.TagServiceIntegrationTest)  Time elapsed: 0.114 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.service.TagServiceIntegrationTest.findById(TagServiceIntegrationTest.java:51)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.service.TagServiceIntegrationTest.findById(TagServiceIntegrationTest.java:51)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "tags" не существует
+  Position: 68
+	at com.example.sweater.service.TagServiceIntegrationTest.findById(TagServiceIntegrationTest.java:51)
+
+deleteByTodoId(com.example.sweater.service.TagServiceIntegrationTest)  Time elapsed: 0.016 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.service.TagServiceIntegrationTest.deleteByTodoId(TagServiceIntegrationTest.java:90)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.service.TagServiceIntegrationTest.deleteByTodoId(TagServiceIntegrationTest.java:90)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos_to_tags" не существует
+  Position: 22
+	at com.example.sweater.service.TagServiceIntegrationTest.deleteByTodoId(TagServiceIntegrationTest.java:90)
+
+addTagForTodo(com.example.sweater.service.TagServiceIntegrationTest)  Time elapsed: 0.063 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.service.TagServiceIntegrationTest.addTagForTodo(TagServiceIntegrationTest.java:62)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.service.TagServiceIntegrationTest.addTagForTodo(TagServiceIntegrationTest.java:62)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos_to_tags" не существует
+  Position: 22
+	at com.example.sweater.service.TagServiceIntegrationTest.addTagForTodo(TagServiceIntegrationTest.java:62)
+
+updateTagforTodo(com.example.sweater.service.TagServiceIntegrationTest)  Time elapsed: 0.159 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.service.TagServiceIntegrationTest.updateTagforTodo(TagServiceIntegrationTest.java:76)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.service.TagServiceIntegrationTest.updateTagforTodo(TagServiceIntegrationTest.java:76)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos_to_tags" не существует
+  Position: 20
+	at com.example.sweater.service.TagServiceIntegrationTest.updateTagforTodo(TagServiceIntegrationTest.java:76)
+

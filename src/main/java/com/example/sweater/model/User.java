@@ -10,17 +10,16 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "users")
+@Table(name = "usrs")
 public class User {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
     @Column(name = "user_name")
     private String username;
 
-    //@CreationTimestamp
     @Column(name = "created_on")
     private String createdOn;
 }

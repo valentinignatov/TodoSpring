@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.example.sweater.service.TodoServiceUnitTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.628 s <<< FAILURE! - in com.example.sweater.service.TodoServiceUnitTest
+createTodo(com.example.sweater.service.TodoServiceUnitTest)  Time elapsed: 0.085 s  <<< ERROR!
+org.springframework.web.server.ResponseStatusException: 404 NOT_FOUND "No such tag to add for todo"
+	at com.example.sweater.service.TodoServiceUnitTest.createTodo(TodoServiceUnitTest.java:106)
+

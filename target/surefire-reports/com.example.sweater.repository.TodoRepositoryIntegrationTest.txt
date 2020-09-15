@@ -1,0 +1,74 @@
+-------------------------------------------------------------------------------
+Test set: com.example.sweater.repository.TodoRepositoryIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.44 s <<< FAILURE! - in com.example.sweater.repository.TodoRepositoryIntegrationTest
+findByText(com.example.sweater.repository.TodoRepositoryIntegrationTest)  Time elapsed: 0.041 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.findByText(TodoRepositoryIntegrationTest.java:32)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.findByText(TodoRepositoryIntegrationTest.java:32)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos" не существует
+  Position: 18
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.findByText(TodoRepositoryIntegrationTest.java:32)
+
+updateById(com.example.sweater.repository.TodoRepositoryIntegrationTest)  Time elapsed: 0.11 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.updateById(TodoRepositoryIntegrationTest.java:43)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.updateById(TodoRepositoryIntegrationTest.java:43)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos" не существует
+  Position: 169
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.updateById(TodoRepositoryIntegrationTest.java:43)
+
+findByTextLike(com.example.sweater.repository.TodoRepositoryIntegrationTest)  Time elapsed: 0.027 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.findByTextLike(TodoRepositoryIntegrationTest.java:69)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.findByTextLike(TodoRepositoryIntegrationTest.java:69)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos" не существует
+  Position: 15
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.findByTextLike(TodoRepositoryIntegrationTest.java:69)
+
+checkTodoForUser(com.example.sweater.repository.TodoRepositoryIntegrationTest)  Time elapsed: 0.071 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.checkTodoForUser(TodoRepositoryIntegrationTest.java:80)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.checkTodoForUser(TodoRepositoryIntegrationTest.java:80)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos" не существует
+  Position: 159
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.checkTodoForUser(TodoRepositoryIntegrationTest.java:80)
+
+countTodoForUser(com.example.sweater.repository.TodoRepositoryIntegrationTest)  Time elapsed: 0.066 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.countTodoForUser(TodoRepositoryIntegrationTest.java:59)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.countTodoForUser(TodoRepositoryIntegrationTest.java:59)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos" не существует
+  Position: 26
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.countTodoForUser(TodoRepositoryIntegrationTest.java:59)
+
+verifyTagIdByTodoId(com.example.sweater.repository.TodoRepositoryIntegrationTest)  Time elapsed: 0.054 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.verifyTagIdByTodoId(TodoRepositoryIntegrationTest.java:90)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.verifyTagIdByTodoId(TodoRepositoryIntegrationTest.java:90)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos_to_tags" не существует
+  Position: 20
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.verifyTagIdByTodoId(TodoRepositoryIntegrationTest.java:90)
+
+countTodosToTags(com.example.sweater.repository.TodoRepositoryIntegrationTest)  Time elapsed: 0.06 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.countTodosToTags(TodoRepositoryIntegrationTest.java:97)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.countTodosToTags(TodoRepositoryIntegrationTest.java:97)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos_to_tags" не существует
+  Position: 22
+	at com.example.sweater.repository.TodoRepositoryIntegrationTest.countTodosToTags(TodoRepositoryIntegrationTest.java:97)
+

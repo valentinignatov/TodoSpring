@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.example.sweater.repository.custom.TodoCustomRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.129 s <<< FAILURE! - in com.example.sweater.repository.custom.TodoCustomRepositoryTest
+search(com.example.sweater.repository.custom.TodoCustomRepositoryTest)  Time elapsed: 0.276 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.custom.TodoCustomRepositoryTest.search(TodoCustomRepositoryTest.java:34)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.custom.TodoCustomRepositoryTest.search(TodoCustomRepositoryTest.java:34)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos" не существует
+  Position: 15
+	at com.example.sweater.repository.custom.TodoCustomRepositoryTest.search(TodoCustomRepositoryTest.java:34)
+

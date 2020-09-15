@@ -32,23 +32,35 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14d59939-88fe-4bf8-b3ae-62870db711a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="14d59939-88fe-4bf8-b3ae-62870db711a8" name="Default Changelist" comment="Add Swagger2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/bean/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/exception/ApiException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/exception/ApiExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/exception/ApiRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/security/MyUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/security/MyUserDetails2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/security/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/security/UserDetailsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/security/UserDetailsRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/security/UserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/bean/UserRole.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/TagController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/TodoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/model/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/model/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/model/Todo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/model/Todo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/impl/FileReaderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/impl/FileReaderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/query.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/query.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/query.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/query.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/sweater.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/TagController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/TagController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/TodoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/TodoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/sweater.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/model/Tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/model/Tag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/model/Todo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/model/Todo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/service/impl/FileReaderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/service/impl/FileReaderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/query.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/query.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/query.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/query.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,8 +78,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -88,7 +101,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../hato16_10_2019" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -107,11 +120,14 @@
       <recent name="com.example.sweater.controller" />
       <recent name="com.example.sweater" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.sweater.service" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.sweater.security" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Application">
@@ -128,48 +144,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in TodoSpring" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TodoSpring" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TagServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TodoSpring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.sweater.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.sweater.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.TagServiceIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TagServiceIntegrationTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TodoSpring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sweater.service.*" />
+          <option name="PATTERN" value="com.example.sweater.security.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.sweater.service" />
       <option name="MAIN_CLASS_NAME" value="com.example.sweater.service.TagServiceIntegrationTest" />
       <option name="METHOD_NAME" value="findAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoCustomRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sweater" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.sweater.repository.custom.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.sweater.repository.custom" />
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.repository.custom.TodoCustomRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoCustomRepositoryTest.search" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sweater" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.sweater.repository.custom.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.sweater.repository.custom" />
-      <option name="MAIN_CLASS_NAME" value="com.example.sweater.repository.custom.TodoCustomRepositoryTest" />
-      <option name="METHOD_NAME" value="search" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -192,10 +200,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.All in TodoSpring" />
+        <item itemvalue="JUnit.TagServiceIntegrationTest" />
         <item itemvalue="JUnit.TagServiceIntegrationTest.findAll" />
         <item itemvalue="JUnit.com.example.sweater.controller in sweater" />
-        <item itemvalue="JUnit.TodoCustomRepositoryTest.search" />
-        <item itemvalue="JUnit.TodoCustomRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -210,6 +218,14 @@
       <option name="presentableId" value="Default" />
       <updated>1563006110990</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add Swagger2">
+      <created>1595862027513</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595862027513</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,39 +240,132 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Swagger2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Swagger2" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="2151" height="217" key="GridCell.Tab.0.bottom" timestamp="1595861792599">
+    <state x="280" y="356" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1596219729164">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state width="2151" height="217" key="GridCell.Tab.0.bottom/0.0.2194.1194@0.0.2194.1194" timestamp="1595861792599" />
-    <state width="2151" height="217" key="GridCell.Tab.0.center" timestamp="1595861792599">
+    <state x="280" y="356" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1596219729164" />
+    <state x="414" y="360" width="579" height="586" key="#com.intellij.ide.util.MemberChooser" timestamp="1600179825538">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="355" y="307" key="#com.intellij.ide.util.MemberChooser/0.0.2194.1194@0.0.2194.1194" timestamp="1597244125327" />
+    <state x="414" y="360" width="579" height="586" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1600179825538" />
+    <state x="880" y="466" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597244801652">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state width="2151" height="217" key="GridCell.Tab.0.center/0.0.2194.1194@0.0.2194.1194" timestamp="1595861792599" />
-    <state width="2151" height="217" key="GridCell.Tab.0.left" timestamp="1595861792599">
+    <state x="880" y="466" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2194.1194@0.0.2194.1194" timestamp="1597244801652" />
+    <state x="1" y="259" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599155209891">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1" y="259" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1599155209891" />
+    <state x="966" y="403" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600177873249">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="828" y="344" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1597243046904" />
+    <state x="966" y="403" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1600177873249" />
+    <state x="93" y="93" width="2008" height="1008" key="DiffContextDialog" timestamp="1597076603728">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state width="2151" height="217" key="GridCell.Tab.0.left/0.0.2194.1194@0.0.2194.1194" timestamp="1595861792599" />
-    <state width="2151" height="217" key="GridCell.Tab.0.right" timestamp="1595861792599">
-      <screen x="0" y="0" width="2194" height="1194" />
+    <state x="93" y="93" width="2008" height="1008" key="DiffContextDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1597076603728" />
+    <state x="385" y="417" key="FileChooserDialogImpl" timestamp="1600182587456">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2151" height="217" key="GridCell.Tab.0.right/0.0.2194.1194@0.0.2194.1194" timestamp="1595861792599" />
-    <state x="628" y="252" key="Maven.ArtifactSearchDialog" timestamp="1595857179928">
-      <screen x="0" y="0" width="2194" height="1194" />
+    <state x="330" y="356" key="FileChooserDialogImpl/0.0.2194.1194@0.0.2194.1194" timestamp="1598269769060" />
+    <state x="385" y="417" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1600182587456" />
+    <state width="2517" height="570" key="GridCell.Tab.0.bottom" timestamp="1600183873680">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2151" height="409" key="GridCell.Tab.0.bottom/0.0.2194.1194@0.0.2194.1194" timestamp="1597259299965" />
+    <state width="2517" height="378" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1600018881848" />
+    <state width="2517" height="570" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1600183873680" />
+    <state width="2517" height="570" key="GridCell.Tab.0.center" timestamp="1600183873680">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2151" height="409" key="GridCell.Tab.0.center/0.0.2194.1194@0.0.2194.1194" timestamp="1597259299965" />
+    <state width="2517" height="378" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1600018881848" />
+    <state width="2517" height="570" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1600183873680" />
+    <state width="2517" height="570" key="GridCell.Tab.0.left" timestamp="1600183873679">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2151" height="409" key="GridCell.Tab.0.left/0.0.2194.1194@0.0.2194.1194" timestamp="1597259299964" />
+    <state width="2517" height="378" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1600018881848" />
+    <state width="2517" height="570" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1600183873679" />
+    <state width="2517" height="570" key="GridCell.Tab.0.right" timestamp="1600183873680">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2151" height="409" key="GridCell.Tab.0.right/0.0.2194.1194@0.0.2194.1194" timestamp="1597259299965" />
+    <state width="2517" height="378" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1600018881848" />
+    <state width="2517" height="570" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1600183873680" />
+    <state width="2517" height="558" key="GridCell.Tab.1.bottom" timestamp="1600183873676">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2151" height="409" key="GridCell.Tab.1.bottom/0.0.2194.1194@0.0.2194.1194" timestamp="1597259299965" />
+    <state width="2517" height="558" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1600183873676" />
+    <state width="2517" height="558" key="GridCell.Tab.1.center" timestamp="1600183873676">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2151" height="409" key="GridCell.Tab.1.center/0.0.2194.1194@0.0.2194.1194" timestamp="1597259299965" />
+    <state width="2517" height="558" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1600183873676" />
+    <state width="2517" height="558" key="GridCell.Tab.1.left" timestamp="1600183873676">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2151" height="409" key="GridCell.Tab.1.left/0.0.2194.1194@0.0.2194.1194" timestamp="1597259299965" />
+    <state width="2517" height="558" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1600183873676" />
+    <state width="2517" height="558" key="GridCell.Tab.1.right" timestamp="1600183873676">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2151" height="409" key="GridCell.Tab.1.right/0.0.2194.1194@0.0.2194.1194" timestamp="1597259299965" />
+    <state width="2517" height="558" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1600183873676" />
+    <state x="733" y="295" key="Maven.ArtifactSearchDialog" timestamp="1599076740863">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="628" y="252" key="Maven.ArtifactSearchDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1595857179928" />
+    <state x="733" y="295" key="Maven.ArtifactSearchDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1599076740863" />
+    <state x="362" y="303" key="RollbackChangesDialog" timestamp="1596222265752">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="362" y="303" key="RollbackChangesDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1596222265752" />
     <state x="606" y="242" key="SettingsEditor" timestamp="1595852304347">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
     <state x="606" y="242" key="SettingsEditor/0.0.2194.1194@0.0.2194.1194" timestamp="1595852304347" />
-    <state x="690" y="330" key="Vcs.Push.Dialog.v2" timestamp="1595861864808">
+    <state x="690" y="330" key="Vcs.Push.Dialog.v2" timestamp="1595862086236">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="690" y="330" key="Vcs.Push.Dialog.v2/0.0.2194.1194@0.0.2194.1194" timestamp="1595861864808" />
-    <state x="809" y="196" width="576" height="801" key="find.popup" timestamp="1595850396866">
+    <state x="690" y="330" key="Vcs.Push.Dialog.v2/0.0.2194.1194@0.0.2194.1194" timestamp="1595862086236" />
+    <state x="944" y="230" width="673" height="940" key="find.popup" timestamp="1600178326462">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="809" y="196" width="576" height="801" key="find.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1598357749483" />
+    <state x="944" y="230" width="673" height="940" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1600178326462" />
+    <state x="806" y="386" key="git4idea.merge.GitPullDialog" timestamp="1595862059036">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="809" y="196" width="576" height="801" key="find.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1595850396866" />
+    <state x="806" y="386" key="git4idea.merge.GitPullDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1595862059036" />
+    <state x="735" y="218" key="new project wizard" timestamp="1597333058563">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="735" y="218" key="new project wizard/0.0.2194.1194@0.0.2194.1194" timestamp="1597333058563" />
+    <state x="435" y="452" key="refactoring.ChangeSignatureDialog" timestamp="1599151330290">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="435" y="452" key="refactoring.ChangeSignatureDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1599151330290" />
+    <state x="245" y="315" width="785" height="795" key="search.everywhere.popup" timestamp="1599073667737">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="210" y="269" width="672" height="678" key="search.everywhere.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1597240124894" />
+    <state x="245" y="315" width="785" height="795" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1599073667737" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="org.springframework.aop.framework.JdkDynamicAopProxy" fieldName="advised" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="masterDetails">
     <states>

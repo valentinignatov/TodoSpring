@@ -14,7 +14,8 @@ import java.util.Scanner;
 public class FileReaderServiceImpl implements FileReaderService {
 
     private String read(){
-        String path = "/home/valentin/IdeaProjects/sweater2/TodoSpring/src/main/resources/query.txt";
+//        String path = "/home/valentin/IdeaProjects/sweater2/TodoSpring/src/main/resources/query.txt";
+        String path = "D:\\dev\\TodoSpring\\src\\test\\resources/query.txt";
 
         File file = new File(path);
         String result = "";

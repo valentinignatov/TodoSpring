@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: com.example.sweater.repository.TagRepositoryIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.125 s <<< FAILURE! - in com.example.sweater.repository.TagRepositoryIntegrationTest
+deleteByTodoId(com.example.sweater.repository.TagRepositoryIntegrationTest)  Time elapsed: 0.013 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TagRepositoryIntegrationTest.deleteByTodoId(TagRepositoryIntegrationTest.java:64)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TagRepositoryIntegrationTest.deleteByTodoId(TagRepositoryIntegrationTest.java:64)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos_to_tags" не существует
+  Position: 22
+	at com.example.sweater.repository.TagRepositoryIntegrationTest.deleteByTodoId(TagRepositoryIntegrationTest.java:64)
+
+addTagForTodo(com.example.sweater.repository.TagRepositoryIntegrationTest)  Time elapsed: 0.044 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TagRepositoryIntegrationTest.addTagForTodo(TagRepositoryIntegrationTest.java:35)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TagRepositoryIntegrationTest.addTagForTodo(TagRepositoryIntegrationTest.java:35)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos_to_tags" не существует
+  Position: 22
+	at com.example.sweater.repository.TagRepositoryIntegrationTest.addTagForTodo(TagRepositoryIntegrationTest.java:35)
+
+updateTagforTodo(com.example.sweater.repository.TagRepositoryIntegrationTest)  Time elapsed: 0.055 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TagRepositoryIntegrationTest.updateTagforTodo(TagRepositoryIntegrationTest.java:50)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.example.sweater.repository.TagRepositoryIntegrationTest.updateTagforTodo(TagRepositoryIntegrationTest.java:50)
+Caused by: org.postgresql.util.PSQLException: 
+ОШИБКА: отношение "todos_to_tags" не существует
+  Position: 20
+	at com.example.sweater.repository.TagRepositoryIntegrationTest.updateTagforTodo(TagRepositoryIntegrationTest.java:50)
+

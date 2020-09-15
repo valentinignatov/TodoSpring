@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.example.sweater.controller.TodoControllerIntegrationTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.057 s <<< FAILURE! - in com.example.sweater.controller.TodoControllerIntegrationTests
+searchTest(com.example.sweater.controller.TodoControllerIntegrationTests)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<401>
+	at com.example.sweater.controller.TodoControllerIntegrationTests.searchTest(TodoControllerIntegrationTests.java:66)
+
+findAllTest(com.example.sweater.controller.TodoControllerIntegrationTests)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<401>
+	at com.example.sweater.controller.TodoControllerIntegrationTests.findAllTest(TodoControllerIntegrationTests.java:36)
+
+findByIdTest(com.example.sweater.controller.TodoControllerIntegrationTests)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<401>
+	at com.example.sweater.controller.TodoControllerIntegrationTests.findByIdTest(TodoControllerIntegrationTests.java:49)
+

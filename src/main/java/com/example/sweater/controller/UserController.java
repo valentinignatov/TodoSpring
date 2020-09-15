@@ -22,7 +22,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping(path = "/findAll")
+    @GetMapping(path = "/all")
     public ResponseEntity<List<UserBean>> findAll() {
         return new ResponseEntity<>(userService.findAllUserBean(), HttpStatus.OK);
     }

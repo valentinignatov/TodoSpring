@@ -3,7 +3,7 @@
 DROP schema public cascade;
 create schema public;
 
-CREATE TABLE users(
+CREATE TABLE usrs(
    	id serial PRIMARY KEY not null,
 	user_name VARCHAR (50) UNIQUE NOT NULL,
   	created_on date default CURRENT_DATE
@@ -16,7 +16,7 @@ CREATE TABLE tags(
 
 CREATE TABLE todos(
 	id serial PRIMARY KEY not null,
-	user_id INTEGER REFERENCES users (id),
+	user_id INTEGER REFERENCES usrs (id),
 	text VARCHAR (50) UNIQUE NOT NULL,
 	created_on date default CURRENT_DATE,
 	updated_on date
@@ -34,7 +34,7 @@ values
 	('medium'),
 	('high importance'); 
 
-insert into users (user_name)
+insert into usrs (user_name)
 values
 	('victor'),
 	('vanea'),
@@ -69,5 +69,18 @@ values
 	(9,2),
 	(9,3);
 
+create type UserDetailsPermission as enum('ADMIN', 'USER', 'CLIENT');
 
+CREATE TABLE my_user_details(
+  id serial PRIMARY KEY not null,
+  username VARCHAR (20) UNIQUE NOT NULL,
+  password VARCHAR (255) NOT NULL,
+  role VARCHAR (255) NOT NULL
+);
+
+insert into my_user_details(username,password,role)
+values
+    ('petea','petea007','USER'),
+    ('vitea','vitea777','ADMIN'),
+    ('azino','3topora','CLIENT');
 
