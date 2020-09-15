@@ -19,7 +19,7 @@ public class TagController {
         this.tagService = tagService;
     }
 
-    @RequestMapping(path = "/all")
+    @RequestMapping(path = "/allTags")
     public ResponseEntity<List<Tag>> findAll() {
         return new ResponseEntity<>(tagService.findAll(), HttpStatus.OK);
     }
